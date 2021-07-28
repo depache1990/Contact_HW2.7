@@ -12,8 +12,8 @@ struct Person {
     var phoneNumber: String
     
     //2ой переход
-    var title: String {
-        "\(email) - \(phoneNumber)"
-    }
+//    var title: String {
+//        "\(email) - \(phoneNumber)"
+//    }
 }
 

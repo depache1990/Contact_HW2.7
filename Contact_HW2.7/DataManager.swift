@@ -6,25 +6,27 @@
 //
 class DataManager {
     static let shared = DataManager()
-    let names: [String] = ["David", "Tim", "Donald", "Paris"]
-    let surnames: [String] = ["Bowie", "Cook", "Trump", "Hilton"]
-    let emails: [String] = ["big@gmail.com", "forme@gmail.com", "onetwo@yahoo.com", "inboxme@yahoo.com"]
-    let phoneNumbers: [String] = ["5532346142", "6988820457", "3844205327", "3287520304"]
-}
+    let names = ["David", "Tim", "Donald", "Paris",]
+    let surnames = ["Bowie", "Cook", "Trump", "Hilton",]
+    let emails = ["big@gmail.com", "forme@gmail.com", "onetwo@yahoo.com", "inboxme@yahoo.com"]
+    let phoneNumbers = ["5532346142", "6988820457", "3844205327", "3287520304"]
+
 func getPersonContact() -> [Person] {
-    var contacts: [Person] = []
-    let names = DataManager.shared.names.shuffled()
-    let surnames = DataManager.shared.surnames.shuffled()
-    let emails = DataManager.shared.emails.shuffled()
-    let phoneNumbers = DataManager.shared.phoneNumbers.shuffled()
+    var list: [Person] = []
+    let personNames = DataManager.shared.names.shuffled()
+    let personSurnames = DataManager.shared.surnames.shuffled()
+    let personEmails = DataManager.shared.emails.shuffled()
+    let personPhoneNumbers = DataManager.shared.phoneNumbers.shuffled()
 
     for index in 0..<4 {
-        let contact = Person(name: names[index],
-                             surname: surnames[index],
-                             email: emails[index],
-                             phoneNumber: phoneNumbers[index]
+        let person = Person(
+            name: personNames[index],
+            surname: personSurnames[index],
+            email: personEmails[index],
+            phoneNumber: personPhoneNumbers[index]
         )
-        contacts.append(contact)
+        list.append(person)
     }
-return contacts
+return list
+}
 }
