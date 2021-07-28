@@ -19,7 +19,7 @@ class ContactUpViewController: UIViewController {
         super.viewDidLoad()
         phoneLabel.text = person.phoneNumber
         emailLabel.text = person.email
-        nameContactLabel.title = person.name
+        nameContactLabel.title = person.name + " " + person.surname
         
        
     }

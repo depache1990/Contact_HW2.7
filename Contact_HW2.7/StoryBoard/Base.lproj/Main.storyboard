@@ -53,9 +53,6 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="a44-Wg-pje" kind="show" id="3Pb-KN-loV"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -65,6 +62,9 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Contacts" image="person.circle" catalog="system" id="BWA-5A-9OU"/>
                     <navigationItem key="navigationItem" title="Personal" id="XHK-fA-qAi"/>
+                    <connections>
+                        <segue destination="a44-Wg-pje" kind="show" identifier="showDetail" id="dos-5B-Lt3"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Ue-f1-hYA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -137,7 +137,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sc0-kj-RJA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3575.36231884058" y="-584.59821428571422"/>
+            <point key="canvasLocation" x="3561" y="-601"/>
         </scene>
         <!--Contacts-->
         <scene sceneID="9ZA-DL-ecG">
